@@ -1,15 +1,15 @@
 import React from "react";
 import NewCharacters from "./NewCharacters";
-import  NewEpisoes from "./NewEpisodes";
+import  NewEpisodes from "./NewEpisodes";
+import Location from "./Location";
 
 const RickMortyData = ()  => (
     <div>  
-        <NewEpisoes />
-       
-        <NewCharacters />
-
-
-
+        <NewEpisodes id={'# de Capítulo'} episode={ 'Nombre del capítulo' }/>   
+        <br />
+        <NewCharacters id={'idPersonaje'} character={'Nombre del personaje'} />
+        <br />
+        <Location id={'idLocation'} location={'Lugar del Universo'}/>
     </div>
 );
 

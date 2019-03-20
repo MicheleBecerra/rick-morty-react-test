@@ -6,8 +6,8 @@ const HomeComponent = () => (
     <div> 
         <h1> Componente Home de la App de Rick y Morty </h1> 
         <hr />
-        <RickMortyData></RickMortyData>
-        
+        <RickMortyData />
+
     </div>
 
 );
