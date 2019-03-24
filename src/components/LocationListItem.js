@@ -8,7 +8,7 @@ const LocationListItem = ({ location })=> {
                 <div className= "field">
                     <h1> Episode by Location { location } </h1>
                 </div>
-            /div>
+            </div>
             
         </div>
     );
