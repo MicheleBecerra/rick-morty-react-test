@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, BrowserRouter as Router } from "react-router-dom";
 import { RICK,
     MORTY,
     JOHNNY,
@@ -27,7 +28,8 @@ const GetNewCharacter = character => {
 
 const NewCharacters = ({ id, character}) => (
     <div> 
-        <h3>And new characters for more funn !!! </h3>
+         <Link to = "/characters" >  <h3>And new characters for more funn !!! </h3> </Link>
+       
         <span>{`${id}`}</span>
         <br />
 

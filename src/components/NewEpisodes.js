@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, BrowserRouter as Router } from "react-router-dom";
 import { EPISODIO_1, 
 EPISODIO_2 , 
 EPISODIO_3 , 
@@ -27,7 +28,8 @@ const getNewEpisodeName = newepisode => {
 
 const NewEpisodes = ({ id, newepisode}) => (
     <div>
-        <h3>You ca now find it by Episodes</h3>
+        <Link to = "/episodes" > <h3>You ca now find it by Episodes</h3> </Link>
+        
         <span>{`${id}`}</span>
         <br />
         {getNewEpisodeName(newepisode)}

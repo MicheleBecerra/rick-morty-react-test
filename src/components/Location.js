@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, BrowserRouter as Router } from "react-router-dom";
 import { EARTH,
     CITADEL,
     MONSTER
@@ -26,7 +27,8 @@ const GetByLocation = location => {
 const Location = ({ id, location }) => (
 
 <div> 
-    <h3> And you can find episodes also by Location </h3>
+<Link to = "/locations" ><h3> And you can find episodes also by Location </h3></Link>
+    
     <span>{`${id}`}</span>
     <br />
 
