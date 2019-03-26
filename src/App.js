@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router} from "react-router-dom";
+import  { Route } from "react-router";
 import HomeComponent from './components/HomeComponent';
-
 import './App.css';
-import { white } from 'ansi-colors';
+
 
 class App extends Component {
 
-  renderHome = () =>  <h1>Render Home</h1> ;
+  renderHome = () =>  < HomeComponent/>;
 
   renderCharacterListContainer = () => <h1> Character Container </h1>
-
+    
   renderEpisodesListContainer = () => <h1> Episodes Container </h1>
 
   renderLocationListContainer = () => <h1> Location Container</h1>
@@ -20,10 +20,10 @@ class App extends Component {
       <Router>
         <div className="App">
           <div className="App-header">
-            <Route exact path="/" Component= {this.renderHome()} />
-            <Route exact path="/character" Component= {this.renderCharacterListContainer()} />
-            <Route exact path="/episode" Component={this.renderEpisodesListContainer()} />
-            <Route exact path="/location" Component={this.renderLocationListContainer()} />                   
+            <Route exact path="/" component= {this.renderHome} />
+            <Route exact path="/character" component= {this.renderCharacterListContainer} />
+            <Route exact path="/episode" component={this.renderEpisodesListContainer} />
+            <Route exact path="/location" component={this.renderLocationListContainer} />                   
           </div>
         </div>
       </Router>
