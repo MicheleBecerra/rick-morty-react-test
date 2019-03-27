@@ -9,25 +9,25 @@ import CharactersContainer from './containers/CharactersContainer';
 import NewCharacterContainer from './containers/NewCharacterContainer';
 import NewEpisodeContainer from './containers/NewEpisodeContainer';
 import NewLocationsContainer from './containers/NewLocationsContainer';
-
+import BarraNavegacion from "./components/barra/BarraNavegacion"
 
 class App extends Component {
+
 
 
   render() {
     return (
       <Router>
         <div className="App">
-          <div className="App-header">
-            <Route exact path="/" component= {HomeComponent} />
-            <Route exact path="/character" component= {CharactersContainer} />
-            <Route exact path="/episode" component={EpisodesContainer} />
-            <Route exact path="/location" component={LocationsContainer} /> 
-            <Route exact path="/newcharacter" component={NewCharacterContainer}/>
-            <Route exact path="/newepisode" component={NewEpisodeContainer}/>
-            <Route exact path="/newlocation" component={NewLocationsContainer}/>     
-
-
+          < BarraNavegacion />
+            <div className="App-header">
+              <Route exact path="/" component= {HomeComponent} />
+              <Route exact path="/character" component= {CharactersContainer} />
+              <Route exact path="/episode" component={EpisodesContainer} />
+              <Route exact path="/location" component={LocationsContainer} /> 
+              <Route exact path="/newcharacter" component={NewCharacterContainer}/>
+              <Route exact path="/newepisode" component={NewEpisodeContainer}/>
+              <Route exact path="/newlocation" component={NewLocationsContainer}/>     
           </div>
         </div>
       </Router>
