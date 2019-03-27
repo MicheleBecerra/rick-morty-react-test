@@ -27,7 +27,7 @@ const GetByLocation = location => {
 const Location = ({ id, location }) => (
 
 <div> 
-<Link to = "/locations" ><h3> And you can find episodes also by Location </h3></Link>
+<Link to = "/newlocation" ><h3> And you can find episodes also by Location </h3></Link>
     
     <span>{`${id}`}</span>
     <br />

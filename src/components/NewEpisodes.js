@@ -28,7 +28,7 @@ const getNewEpisodeName = newepisode => {
 
 const NewEpisodes = ({ id, newepisode}) => (
     <div>
-        <Link to = "/episodes" > <h3>You ca now find it by Episodes</h3> </Link>
+        <Link to = "/newepisode" > <h3>You ca now find it by Episodes</h3> </Link>
         
         <span>{`${id}`}</span>
         <br />

@@ -6,17 +6,13 @@ import HomeComponent from './components/HomeComponent';
 import LocationsContainer from './containers/LocationsContainer';
 import EpisodesContainer from './containers/EpisodesContainer';
 import CharactersContainer from './containers/CharactersContainer';
+import NewCharacterContainer from './containers/NewCharacterContainer';
+import NewEpisodeContainer from './containers/NewEpisodeContainer';
+import NewLocationsContainer from './containers/NewLocationsContainer';
 
 
 class App extends Component {
 
-  renderHome = () =>  <h1> Home Container </h1>;
-
-  renderCharacterListContainer = () => <h1> Character Container </h1>
-    
-  renderEpisodesListContainer = () => <h1> Episodes Container </h1>
-
-  renderLocationListContainer = () => <h1> Location Container</h1>
 
   render() {
     return (
@@ -26,7 +22,12 @@ class App extends Component {
             <Route exact path="/" component= {HomeComponent} />
             <Route exact path="/character" component= {CharactersContainer} />
             <Route exact path="/episode" component={EpisodesContainer} />
-            <Route exact path="/location" component={LocationsContainer} />                   
+            <Route exact path="/location" component={LocationsContainer} /> 
+            <Route exact path="/newcharacter" component={NewCharacterContainer}/>
+            <Route exact path="/newepisode" component={NewEpisodeContainer}/>
+            <Route exact path="/newlocation" component={NewLocationsContainer}/>     
+
+
           </div>
         </div>
       </Router>

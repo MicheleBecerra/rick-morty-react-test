@@ -28,7 +28,7 @@ const GetNewCharacter = character => {
 
 const NewCharacters = ({ id, character}) => (
     <div> 
-         <Link to = "/characters" >  <h3>And new characters for more funn !!! </h3> </Link>
+         <Link to = "/newcharacter" >  <h3>And new characters for more funn !!! </h3> </Link>
        
         <span>{`${id}`}</span>
         <br />
