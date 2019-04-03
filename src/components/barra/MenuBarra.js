@@ -9,7 +9,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import MenuIcon from '@material-ui/icons/Menu';
 import { withStyles } from '@material-ui/core/styles';
-import { white } from 'ansi-colors';
+import { Link } from "react-router-dom";
 
 const styles = theme => ({
   root: {
@@ -69,9 +69,12 @@ class MenuListComposition extends React.Component {
                 <Paper>
                   <ClickAwayListener onClickAway={this.handleClose}>
                     <MenuList>
-                      <MenuItem onClick={this.handleClose}>Personjes</MenuItem>
-                      <MenuItem onClick={this.handleClose}>Episodios</MenuItem>
-                      <MenuItem onClick={this.handleClose}>Locaciones</MenuItem>
+                      <Link to= "/"> <MenuItem onClick={this.handleClose}>Home</MenuItem> </Link>
+                      <Link to= "/character"> <MenuItem onClick={this.handleClose}>Personjes</MenuItem> </Link>
+                      <Link to ="/episode"> <MenuItem onClick={this.handleClose}>Episodios</MenuItem></Link>
+                      <Link to= "/location"> <MenuItem onClick={this.handleClose}>Locaciones</MenuItem> </Link>
+
+                      
                     </MenuList>
                   </ClickAwayListener>
                 </Paper>
