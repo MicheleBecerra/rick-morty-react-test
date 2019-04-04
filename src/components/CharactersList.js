@@ -2,19 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CharacterListItem from './CharacterListItem';
 
-const CahractersList = ({ character }) => {
+const CharactersList = ({ characters }) => {
     return (
         <div>
-            <div className="character-list">
+            <div className="characters-list">
                 {
-                    character.map( char => 
+                    characters.map( char => 
                     <CharacterListItem
                         key={char.id}
+                        id={char.id}
                         name={char.name}
                         status={char.status}
                         species={char.species}
                         gender={char.gender}
-                        origin={char.origin.name}
+                        origin={char.origin}
                         image={char.image}
                         urlPath={char.url}                   
                     ></CharacterListItem>)
@@ -24,8 +25,9 @@ const CahractersList = ({ character }) => {
     );
 };
 
-CahractersList.propTypes = {
-    
+CharactersList.propTypes = {
+    characters: PropTypes.array.isRequired,
+    urlPath:PropTypes.string.isRequired,
 };
 
-export default CahractersList;
+export default CharactersList;
