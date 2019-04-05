@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import AppFrame from './../components/AppFrame';
 import CharactersList from '../components/CharactersList';
+import { fetchCharacters } from "./../actions/fetchCharacters";
 
 
 const characters = [
@@ -26,6 +28,10 @@ const characters = [
 
 class CharactersContainer extends Component {
 
+    componentDidMount() {
+        this.props.fetchCharacters() ;
+    }
+
     renderBody = characters => (
            <CharactersList 
                 characters = {characters} 
@@ -45,7 +51,14 @@ class CharactersContainer extends Component {
 }
 
 CharactersContainer.propTypes = {
-
+    fetchCharacters: PropTypes.func.isRequired,
 };
 
-export default CharactersContainer;
+const mapDispatchToProps = dispatch => (
+    {
+        fetchCharacters : () => dispatch( fetchCharacters()  )
+    }
+
+)
+
+export default (connect( null, mapDispatchToProps) (CharactersContainer));
