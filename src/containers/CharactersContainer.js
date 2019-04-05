@@ -6,25 +6,7 @@ import CharactersList from '../components/CharactersList';
 import { fetchCharacters } from "./../actions/fetchCharacters";
 
 
-const characters = [
-    { 
-      "id" : "1" ,
-      "name": "Rick Sanchez" ,
-      "species": "Human"
-    
-    },
-    {
-        "id": "2",
-        "name": "Morty Smith",
-        "species": "Human"
-        },
-    {
-        "id": "183",
-        "name": "Johnny Depp",
-        "species": "Human",
-    }
-    
-] ;
+
 
 class CharactersContainer extends Component {
 
@@ -43,7 +25,7 @@ class CharactersContainer extends Component {
         return (
             <div>
                 <AppFrame header={'Lista de TODOS los personajes !!!'}
-                body={this.renderBody(characters)}>
+                body={this.renderBody(this.props.characters)}>
                 </AppFrame>
             </div>
         );
@@ -52,13 +34,15 @@ class CharactersContainer extends Component {
 
 CharactersContainer.propTypes = {
     fetchCharacters: PropTypes.func.isRequired,
+    characters: PropTypes.array.isRequired,
 };
 
-const mapDispatchToProps = dispatch => (
-    {
-        fetchCharacters : () => dispatch( fetchCharacters()  )
-    }
+CharactersContainer.defaultProps = {
 
-)
+    characters : [   ] 
+};
 
-export default (connect( null, mapDispatchToProps) (CharactersContainer));
+const mapStateToProps = state => ({
+    characters: state.characters
+})
+export default (connect( mapStateToProps, { fetchCharacters }) (CharactersContainer));
